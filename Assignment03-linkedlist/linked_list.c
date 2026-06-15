@@ -32,7 +32,7 @@ void InsertAtStart(){
         }
         
         else{
-            newnode->next = head->next;
+            newnode->next = head;
             head = newnode;
         }
 
@@ -279,6 +279,76 @@ void DeleteAtPosition(){
                     free(temp);
 
                 }
-
+        }
     }
+}
+
+void display(){
+    printf("-------- Linked List -----------\n");
+    struct node *temp = head;
+    if(head == NULL){
+        printf("\n No data to display, list is empty ");
+        return;
+    }
+    printf("Data :");
+    int position = 1;
+    while( temp !=NULL ){
+        printf("\tV\n");
+        printf(" position : %d data : %d",position,temp->data);
+    }
+
+}
+
+int main(){
+    int choice = -1;
+    printf("-------- Linked List -----------\n");
+
+    while(1){
+        printf("\tMENU\t\n");
+        printf("\t1. Insert At First\t\n");
+        printf("\t2. Insert At Last\t\n");
+        printf("\t3. Insert At Position\t\n");
+        printf("\t4. Delete At First\t\n");
+        printf("\t5. Delete At Last\t\n");
+        printf("\t6. Delete At Position\t\n");
+        printf("\t7. Display\t\n");
+        printf("\t8. Exit\t\n");
+
+
+        printf("\n Enter the choice no :- ");
+        scanf("%d",choice);
+
+        switch (choice)
+        {
+        case 1:
+            InsertAtStart();
+            break;
+        case 2:
+            InsertionAtLast();
+            break;
+        case 3:
+            InsertAtPosition();
+            break;
+        case 4:
+            DeleteAtFirst();
+            break;
+        case 5:
+            DeleteAtLast();
+            break;
+        case 6:
+            DeleteAtPosition;
+            break;
+        case 7:
+            display();
+            break;
+        case 8:
+            printf("\nExiting the program");
+            return 0;
+        default:
+            printf("Invalid Choice");
+            break;
+        }
+    }
+
+
 }
