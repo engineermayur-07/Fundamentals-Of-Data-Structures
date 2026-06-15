@@ -17,7 +17,7 @@ struct node *CreateNode(){
 
 
 void display(){
-    printf("-------- Linked List -----------\n");
+    printf("-------- Stack Using Linked List -----------\n");
     struct node *temp = top;
     if(top == NULL){
         printf("\n No data to display, list is empty ");
@@ -82,7 +82,7 @@ void PUSH(){
 
 int main(){
     int choice = -1;
-    printf("-------- Linked List -----------\n");
+    printf("-------- Stack Using Linked List -----------\n");
 
     while(1){
         printf("\tMENU\t\n");
