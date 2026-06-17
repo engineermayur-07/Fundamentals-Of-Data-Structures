@@ -174,5 +174,41 @@ void pattern08( int n ){
 }
 
 int main(){
+    int choice = -1 , n = 4 ;
+    printf("\n\n Enter pattern no :-  ");
+    scanf("%d", &choice ) ;
+
+    printf("\n\n Enter n :-  ");
+    scanf("%d", &n ) ;
+    switch (choice)
+    {
+    case 1:
+        pattern01(n);
+        break;
+    case 2:
+        pattern02(n);
+        break;
+    case 3:
+        pattern03(n);
+        break;
+    case 4:
+        pattern04(n);
+        break;
+    case 5:
+        pattern05(n);
+        break;
+    case 6:
+        pattern06(n);
+        break;
+    case 7:
+        pattern07(n);
+        break;
+    case 8:
+        pattern08(n);
+        break;
+    default:
+        printf("\n There are only 8 patterns, enter no from 1 to 8");
+        break;
+    }
     pattern08(4) ;
 }
